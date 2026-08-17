@@ -114,6 +114,18 @@ def run_structured_demo(
     engine: "HeritageGateEngine", project_id: str = STRUCTURED_IDS["project"]
 ) -> dict[str, Any]:
     """Create normalized entities and run a mixed Gate 0-to-7 demonstration."""
+    # Entity IDs are a global primary key by design (get_entity(entity_type,
+    # entity_id) takes no project_id — see structured.py), so a caller who
+    # runs this demonstration under two different project IDs against the
+    # same database must not reuse the same literal ID string for both: the
+    # second call's _ensure_entity would find the first project's entity
+    # already registered under that ID and silently reuse it rather than
+    # creating one scoped to the new project, leaving the second project
+    # with no rights-holder or authorization records of its own. Salting
+    # every constant ID with the calling project_id keeps a single project
+    # idempotent under repeated calls (the intended, tested behaviour) while
+    # giving each distinct project_id its own entity set.
+    ids = {key: f"{value}--{project_id}" for key, value in STRUCTURED_IDS.items() if key != "project"}
     try:
         engine.create_project(
             name="Structured Synthetic Motif Research Demo",
@@ -135,10 +147,10 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "rights-holder",
-        STRUCTURED_IDS["bearer"],
+        ids["bearer"],
         project_id,
         {
-            "id": STRUCTURED_IDS["bearer"],
+            "id": ids["bearer"],
             "name": "Synthetic motif steward",
             "holder_type": "bearer",
             "authority_basis": "Fictional stewardship role created only for software testing",
@@ -149,10 +161,10 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "rights-holder",
-        STRUCTURED_IDS["designer"],
+        ids["designer"],
         project_id,
         {
-            "id": STRUCTURED_IDS["designer"],
+            "id": ids["designer"],
             "name": "Synthetic design reviewer",
             "holder_type": "designer",
             "authority_basis": "Fictional design-review role",
@@ -162,10 +174,10 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "rights-holder",
-        STRUCTURED_IDS["producer"],
+        ids["producer"],
         project_id,
         {
-            "id": STRUCTURED_IDS["producer"],
+            "id": ids["producer"],
             "name": "Synthetic production reviewer",
             "holder_type": "producer",
             "authority_basis": "Fictional production-review role",
@@ -175,18 +187,18 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "authorization",
-        STRUCTURED_IDS["authorization"],
+        ids["authorization"],
         project_id,
         {
-            "id": STRUCTURED_IDS["authorization"],
+            "id": ids["authorization"],
             "status": "approved",
             "parties": [
                 {
-                    "rights_holder_id": STRUCTURED_IDS["bearer"],
+                    "rights_holder_id": ids["bearer"],
                     "party_role": "authorizer",
                 },
                 {
-                    "rights_holder_id": STRUCTURED_IDS["bearer"],
+                    "rights_holder_id": ids["bearer"],
                     "party_role": "beneficiary",
                 },
             ],
@@ -220,7 +232,7 @@ def run_structured_demo(
         "version": "0.5.1-demo",
         "annotators": [
             {
-                "rights_holder_id": STRUCTURED_IDS["bearer"],
+                "rights_holder_id": ids["bearer"],
                 "annotation_role": "principal",
             }
         ],
@@ -228,11 +240,11 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "element-card",
-        STRUCTURED_IDS["element_1"],
+        ids["element_1"],
         project_id,
         {
             **common_card,
-            "id": STRUCTURED_IDS["element_1"],
+            "id": ids["element_1"],
             "element_code": "SYN-LATTICE-A",
             "name": "Synthetic lattice unit A",
             "technical_features": {"symmetry": "fourfold", "line_weight": "medium"},
@@ -241,11 +253,11 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "element-card",
-        STRUCTURED_IDS["element_2"],
+        ids["element_2"],
         project_id,
         {
             **common_card,
-            "id": STRUCTURED_IDS["element_2"],
+            "id": ids["element_2"],
             "element_code": "SYN-LATTICE-B",
             "name": "Synthetic lattice unit B",
             "technical_features": {"symmetry": "bilateral", "line_weight": "light"},
@@ -259,18 +271,18 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "model-run",
-        STRUCTURED_IDS["model_run"],
+        ids["model_run"],
         project_id,
         {
-            "id": STRUCTURED_IDS["model_run"],
+            "id": ids["model_run"],
             "model_name": "SyntheticPatternGenerator",
             "model_version": "0.2-demo",
             "constraint_method": "rule-based adapter simulation",
             "model_ref": "synthetic://models/pattern-generator-0.2",
             "parameters": {"seed": 20260729, "constraint_strength": 0.85},
             "source_element_ids": [
-                STRUCTURED_IDS["element_1"],
-                STRUCTURED_IDS["element_2"],
+                ids["element_1"],
+                ids["element_2"],
             ],
             "output_count": 24,
             "provenance_ref": "synthetic://logs/generation-demo-002.jsonl",
@@ -286,11 +298,11 @@ def run_structured_demo(
     review_payloads = [
         (
             "expert-review",
-            STRUCTURED_IDS["review_bearer"],
+            ids["review_bearer"],
             {
-                "id": STRUCTURED_IDS["review_bearer"],
-                "model_run_id": STRUCTURED_IDS["model_run"],
-                "reviewer_rights_holder_id": STRUCTURED_IDS["bearer"],
+                "id": ids["review_bearer"],
+                "model_run_id": ids["model_run"],
+                "reviewer_rights_holder_id": ids["bearer"],
                 "reviewer_role": "bearer",
                 "cultural_score": 4.4,
                 "decision": "approved",
@@ -300,11 +312,11 @@ def run_structured_demo(
         ),
         (
             "expert-review",
-            STRUCTURED_IDS["review_design"],
+            ids["review_design"],
             {
-                "id": STRUCTURED_IDS["review_design"],
-                "model_run_id": STRUCTURED_IDS["model_run"],
-                "reviewer_rights_holder_id": STRUCTURED_IDS["designer"],
+                "id": ids["review_design"],
+                "model_run_id": ids["model_run"],
+                "reviewer_rights_holder_id": ids["designer"],
                 "reviewer_role": "design_expert",
                 "aesthetic_score": 4.2,
                 "decision": "approved",
@@ -314,11 +326,11 @@ def run_structured_demo(
         ),
         (
             "expert-review",
-            STRUCTURED_IDS["review_production"],
+            ids["review_production"],
             {
-                "id": STRUCTURED_IDS["review_production"],
-                "model_run_id": STRUCTURED_IDS["model_run"],
-                "reviewer_rights_holder_id": STRUCTURED_IDS["producer"],
+                "id": ids["review_production"],
+                "model_run_id": ids["model_run"],
+                "reviewer_rights_holder_id": ids["producer"],
                 "reviewer_role": "production_expert",
                 "feasibility_score": 4.0,
                 "decision": "approved",
@@ -337,11 +349,11 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "market-test",
-        STRUCTURED_IDS["market_test"],
+        ids["market_test"],
         project_id,
         {
-            "id": STRUCTURED_IDS["market_test"],
-            "model_run_id": STRUCTURED_IDS["model_run"],
+            "id": ids["market_test"],
+            "model_run_id": ids["model_run"],
             "sample_size": 36,
             "test_channel": "controlled synthetic usability panel",
             "perceived_authenticity": 4.1,
@@ -360,12 +372,12 @@ def run_structured_demo(
     _ensure_entity(
         engine,
         "revenue-distribution",
-        STRUCTURED_IDS["distribution"],
+        ids["distribution"],
         project_id,
         {
-            "id": STRUCTURED_IDS["distribution"],
-            "authorization_id": STRUCTURED_IDS["authorization"],
-            "recipient_rights_holder_id": STRUCTURED_IDS["bearer"],
+            "id": ids["distribution"],
+            "authorization_id": ids["authorization"],
+            "recipient_rights_holder_id": ids["bearer"],
             "revenue_category": "product",
             "gross_amount": 1000.0,
             "currency": "USD",
@@ -411,10 +423,10 @@ def run_pilot_demo(
     _ensure_pilot_entity(
         engine,
         "study",
-        "study-demo-001",
+        f"study-demo-001--{project_id}",
         project_id,
         {
-            "id": "study-demo-001",
+            "id": f"study-demo-001--{project_id}",
             "study_title": "Synthetic HeritageGate usability and workflow pilot",
             "protocol_version": "1.0-synthetic",
             "study_design": "crossover",
@@ -447,7 +459,7 @@ def run_pilot_demo(
     ]
     task_ids: list[str] = []
     for order, (code, title, description, outcome, gate) in enumerate(tasks, 1):
-        task_id = f"task-demo-{order:02d}"
+        task_id = f"task-demo-{order:02d}--{project_id}"
         task_ids.append(task_id)
         _ensure_pilot_entity(
             engine,
@@ -503,7 +515,7 @@ def run_pilot_demo(
 
     base_date = datetime(2026, 7, 1, 9, 0, tzinfo=timezone.utc)
     for i in range(8):
-        participant_id = f"participant-demo-{i+1:02d}"
+        participant_id = f"participant-demo-{i+1:02d}--{project_id}"
         _ensure_pilot_entity(
             engine,
             "participant",
@@ -521,7 +533,7 @@ def run_pilot_demo(
             },
         )
         for condition, times in (("baseline", baseline_times[i]), ("heritagegate", heritagegate_times[i])):
-            session_id = f"session-demo-{condition}-{i+1:02d}"
+            session_id = f"session-demo-{condition}-{i+1:02d}--{project_id}"
             start = base_date + timedelta(days=i, hours=0 if condition == "baseline" else 4)
             total = sum(times) + 300
             end = start + timedelta(seconds=total)
@@ -552,10 +564,10 @@ def run_pilot_demo(
                 _ensure_pilot_entity(
                     engine,
                     "installation",
-                    f"install-demo-{i+1:02d}",
+                    f"install-demo-{i+1:02d}--{project_id}",
                     project_id,
                     {
-                        "id": f"install-demo-{i+1:02d}",
+                        "id": f"install-demo-{i+1:02d}--{project_id}",
                         "session_id": session_id,
                         "install_method": "wheel",
                         "software_version": __version__,
@@ -578,7 +590,7 @@ def run_pilot_demo(
                     success = False
                     completion_status = "failed"
                     error_count += 2
-                attempt_id = f"attempt-demo-{condition}-{i+1:02d}-{task_index:02d}"
+                attempt_id = f"attempt-demo-{condition}-{i+1:02d}-{task_index:02d}--{project_id}"
                 _ensure_pilot_entity(
                     engine,
                     "task-attempt",
@@ -603,10 +615,10 @@ def run_pilot_demo(
                 _ensure_pilot_entity(
                     engine,
                     "sus-response",
-                    f"sus-demo-{i+1:02d}",
+                    f"sus-demo-{i+1:02d}--{project_id}",
                     project_id,
                     {
-                        "id": f"sus-demo-{i+1:02d}",
+                        "id": f"sus-demo-{i+1:02d}--{project_id}",
                         "session_id": session_id,
                         "responses": sus_sets[i],
                         "submitted_at": end.isoformat(),
@@ -624,10 +636,10 @@ def run_pilot_demo(
         _ensure_pilot_entity(
             engine,
             "workflow-benchmark",
-            f"benchmark-demo-{index:02d}",
+            f"benchmark-demo-{index:02d}--{project_id}",
             project_id,
             {
-                "id": f"benchmark-demo-{index:02d}",
+                "id": f"benchmark-demo-{index:02d}--{project_id}",
                 "benchmark_label": label,
                 "workflow_unit": unit,
                 "heritagegate_seconds": hg_seconds,
@@ -648,7 +660,7 @@ def run_pilot_demo(
     # participants here keeps the bundled demonstration self-consistent, which
     # matters because it is the first thing a new user runs.
     for i in range(8):
-        participant_id = f"participant-demo-{i+1:02d}"
+        participant_id = f"participant-demo-{i+1:02d}--{project_id}"
         try:
             engine.real_pilot.enroll_existing_participant(
                 project_id,
