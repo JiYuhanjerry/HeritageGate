@@ -1,2 +1,0 @@
-source_id,participant_role,experience_level,consent_status,consented_at,eligibility_status,demographics_json,data_use_scope_json,notes
-LOCAL-001,researcher,novice,consented,2026-08-01,eligible,"{""age_band"": ""25-34"", ""region_level"": ""province"", ""occupation_category"": ""design""}","[""pilot_analysis"", ""aggregate_publication""]",Synthetic template row for format reference only. Replace with real de-identified rows before import.
