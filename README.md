@@ -1,6 +1,6 @@
 # HeritageGate
 
-[![CI](https://github.com/SHELLY000/HeritageGate/actions/workflows/ci.yml/badge.svg)](https://github.com/SHELLY000/HeritageGate/actions/workflows/ci.yml)
+[![CI](https://github.com/JiYuhanjerry/HeritageGate/actions/workflows/ci.yml/badge.svg)](https://github.com/JiYuhanjerry/HeritageGate/actions/workflows/ci.yml)
 
 **HeritageGate** is an open-source Python research-software platform for
 stage-gated, rights-aware, provenance-preserving AI-assisted intangible

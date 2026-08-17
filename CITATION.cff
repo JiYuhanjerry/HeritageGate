@@ -6,8 +6,16 @@ version: 0.5.5
 date-released: "2026-08-03"
 license: Apache-2.0
 authors:
-  - name: "HeritageGate contributors"
-repository-code: "https://github.com/SHELLY000/HeritageGate"
+  - family-names: "Ji"
+    given-names: "Yuhan"
+    email: "1468321593@qq.com"
+    orcid: "https://orcid.org/0009-0008-7594-9460"
+contact:
+  - family-names: "Ji"
+    given-names: "Yuhan"
+    email: "1468321593@qq.com"
+    orcid: "https://orcid.org/0009-0008-7594-9460"
+repository-code: "https://github.com/JiYuhanjerry/HeritageGate"
 abstract: >-
   HeritageGate implements an eight-stage workflow with normalized rights,
   authorization, cultural-element, model-run, expert-review, market-test,
