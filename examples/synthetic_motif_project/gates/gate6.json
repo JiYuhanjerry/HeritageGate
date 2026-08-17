@@ -1,0 +1,10 @@
+{
+  "sample_size": 36,
+  "perceived_authenticity": 4.1,
+  "perceived_cultural_value": 4.0,
+  "story_comprehension": 4.2,
+  "purchase_intention": 3.7,
+  "recommendation_intention": 3.9,
+  "test_channel": "controlled synthetic usability panel",
+  "market_test_report_ref": "reports/market-test-demo-001.json"
+}

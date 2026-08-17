@@ -1,0 +1,41 @@
+{
+  "files": [
+    "README.txt",
+    "SHA256SUMS.txt",
+    "audit_trail.csv",
+    "authorization_records.csv",
+    "cultural_element_cards.csv",
+    "data_dictionary.csv",
+    "entity_counts.csv",
+    "expert_reviews.csv",
+    "gate_records.csv",
+    "gate_summary.csv",
+    "manifest.json",
+    "market_tests.csv",
+    "model_runs.csv",
+    "projects.csv",
+    "revenue_distributions.csv",
+    "rights_holders.csv"
+  ],
+  "output_directory": "/tmp/heritagegate-export-jijfrhw9/heritagegate-demo-structured-001",
+  "output_zip": "/mnt/data/heritagegate_v031/HeritageGate/examples/v030_local_web/research_bundle.zip",
+  "project_id": "demo-structured-001",
+  "row_counts": {
+    "audit_trail": 22,
+    "authorization_records": 1,
+    "cultural_element_cards": 2,
+    "data_dictionary": 12,
+    "entity_counts": 7,
+    "expert_reviews": 3,
+    "gate_records": 8,
+    "gate_summary": 8,
+    "market_tests": 1,
+    "model_runs": 1,
+    "projects": 1,
+    "revenue_distributions": 1,
+    "rights_holders": 3
+  },
+  "schema_version": "0.3.0",
+  "sha256": "186bb1317510db55c8ddc2389881068fa0b19815aa0060990c9974157e49b8e3",
+  "size_bytes": 14985
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate authorization record",
+  "type": "object",
+  "required": [
+    "status",
+    "parties",
+    "permitted_uses",
+    "prohibited_uses",
+    "attribution_requirements",
+    "revenue_terms",
+    "evidence_ref"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "approved",
+        "pending",
+        "restricted",
+        "revoked"
+      ]
+    },
+    "parties": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "rights_holder_id",
+          "party_role"
+        ],
+        "properties": {
+          "rights_holder_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "party_role": {
+            "enum": [
+              "authorizer",
+              "beneficiary",
+              "representative"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "permitted_uses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "prohibited_uses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "attribution_requirements": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revenue_terms": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "valid_from": {
+      "type": "string"
+    },
+    "valid_until": {
+      "type": "string"
+    },
+    "signed_at": {
+      "type": "string"
+    },
+    "revoked_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "id": "auth-manual-001",
+  "status": "approved",
+  "parties": [
+    {
+      "rights_holder_id": "holder-manual-bearer",
+      "party_role": "authorizer"
+    },
+    {
+      "rights_holder_id": "holder-manual-bearer",
+      "party_role": "beneficiary"
+    }
+  ],
+  "permitted_uses": [
+    "research demonstration",
+    "software testing"
+  ],
+  "prohibited_uses": [
+    "representation as authentic heritage",
+    "external commercial deployment"
+  ],
+  "attribution_requirements": "Identify all assets as synthetic HeritageGate demo content.",
+  "revenue_terms": "Synthetic accounting simulation allocates 60% to the fictional steward.",
+  "evidence_ref": "synthetic://authorizations/auth-manual-001",
+  "signed_at": "2026-07-29"
+}

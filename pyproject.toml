@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heritagegate"
+version = "0.5.5"
+description = "A stage-gated, rights-aware research workflow with privacy-aware real-pilot enrollment, reproducible statistics, and GitHub, Zenodo, and SoftwareX release preparation for AI-assisted intangible cultural heritage projects."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "HeritageGate contributors"}
+]
+keywords = [
+  "intangible cultural heritage",
+  "generative AI",
+  "workflow",
+  "provenance",
+  "rights governance",
+  "research software"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Information Analysis"
+]
+dependencies = []
+
+[project.scripts]
+heritagegate = "heritagegate.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

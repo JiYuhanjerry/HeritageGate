@@ -1,0 +1,8 @@
+{
+  "dataset_id": "HG-SYNTH-001",
+  "source_count": 12,
+  "technical_metadata_complete": true,
+  "cultural_metadata_complete": true,
+  "license_terms": "CC0-1.0 for synthetic demo data",
+  "capture_log_ref": "logs/capture-demo-001.jsonl"
+}

@@ -1,0 +1,739 @@
+{
+  "audit_trail": [
+    {
+      "created_at": "2026-07-29T00:32:38.773356+00:00",
+      "details": {
+        "heritage_name": "Fictional cloud-lattice motif (not real ICH)",
+        "name": "Structured Synthetic Motif Research Demo"
+      },
+      "event_type": "project_created",
+      "gate": null,
+      "id": 1,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.775827+00:00",
+      "details": {
+        "payload": {
+          "permission_status": "permissible",
+          "rationale": "Synthetic motif invented for software demonstration; no living-community claim.",
+          "reviewers": [
+            "demo cultural reviewer",
+            "demo legal reviewer"
+          ]
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 0,
+      "id": 2,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.778662+00:00",
+      "details": {
+        "id": "holder-demo-bearer"
+      },
+      "event_type": "rights_holder_created",
+      "gate": null,
+      "id": 3,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.781020+00:00",
+      "details": {
+        "id": "holder-demo-designer"
+      },
+      "event_type": "rights_holder_created",
+      "gate": null,
+      "id": 4,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.783533+00:00",
+      "details": {
+        "id": "holder-demo-producer"
+      },
+      "event_type": "rights_holder_created",
+      "gate": null,
+      "id": 5,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.786129+00:00",
+      "details": {
+        "id": "auth-demo-001",
+        "status": "approved"
+      },
+      "event_type": "authorization_created",
+      "gate": null,
+      "id": 6,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.788594+00:00",
+      "details": {
+        "payload": {
+          "attribution_requirements": "Identify all assets as synthetic HeritageGate demo content.",
+          "authorization_record_ref": "structured://authorization-records/auth-demo-001",
+          "authorization_status": "approved",
+          "authorizers": [
+            "Synthetic motif steward"
+          ],
+          "permitted_uses": [
+            "research demonstration",
+            "software testing"
+          ],
+          "prohibited_uses": [
+            "external commercial deployment",
+            "representation as authentic heritage"
+          ],
+          "revenue_terms": "Synthetic accounting simulation allocates 60% to the fictional steward."
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 1,
+      "id": 7,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.790664+00:00",
+      "details": {
+        "payload": {
+          "capture_log_ref": "logs/capture-demo-001.jsonl",
+          "cultural_metadata_complete": true,
+          "dataset_id": "HG-SYNTH-001",
+          "license_terms": "CC0-1.0 for synthetic demo data",
+          "source_count": 12,
+          "technical_metadata_complete": true
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 2,
+      "id": 8,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.793535+00:00",
+      "details": {
+        "id": "element-demo-001",
+        "status": "approved"
+      },
+      "event_type": "element_card_created",
+      "gate": null,
+      "id": 9,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.796091+00:00",
+      "details": {
+        "id": "element-demo-002",
+        "status": "approved"
+      },
+      "event_type": "element_card_created",
+      "gate": null,
+      "id": 10,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.798670+00:00",
+      "details": {
+        "payload": {
+          "bearer_annotation": true,
+          "element_card_schema_ref": "schemas/cultural-element-card.schema.json",
+          "elements_count": 2,
+          "library_version": "0.3.1-demo",
+          "prohibited_combinations_documented": true
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 3,
+      "id": 11,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.801463+00:00",
+      "details": {
+        "id": "run-demo-001",
+        "status": "completed"
+      },
+      "event_type": "model_run_created",
+      "gate": null,
+      "id": 12,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.804533+00:00",
+      "details": {
+        "payload": {
+          "constraint_method": "rule-based adapter simulation",
+          "generated_variants": 24,
+          "generation_log_ref": "synthetic://logs/generation-demo-002.jsonl",
+          "model_name": "SyntheticPatternGenerator",
+          "model_version": "0.2-demo",
+          "provenance_enabled": true,
+          "source_element_ids": [
+            "element-demo-001",
+            "element-demo-002"
+          ]
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 4,
+      "id": 13,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.810779+00:00",
+      "details": {
+        "decision": "approved",
+        "id": "review-demo-bearer",
+        "role": "bearer"
+      },
+      "event_type": "expert_review_created",
+      "gate": null,
+      "id": 14,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.813305+00:00",
+      "details": {
+        "decision": "approved",
+        "id": "review-demo-design",
+        "role": "design_expert"
+      },
+      "event_type": "expert_review_created",
+      "gate": null,
+      "id": 15,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.815773+00:00",
+      "details": {
+        "decision": "approved",
+        "id": "review-demo-production",
+        "role": "production_expert"
+      },
+      "event_type": "expert_review_created",
+      "gate": null,
+      "id": 16,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.818745+00:00",
+      "details": {
+        "payload": {
+          "bearer_approved": true,
+          "design_expert_approved": true,
+          "production_feasible": true,
+          "review_record_ref": "structured://expert-reviews/review-demo-bearer,review-demo-design,review-demo-production",
+          "reviewers": [
+            "Synthetic design reviewer",
+            "Synthetic motif steward",
+            "Synthetic production reviewer"
+          ]
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 5,
+      "id": 17,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.821650+00:00",
+      "details": {
+        "id": "market-demo-001"
+      },
+      "event_type": "market_test_created",
+      "gate": null,
+      "id": 18,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.824153+00:00",
+      "details": {
+        "payload": {
+          "market_test_report_ref": "synthetic://reports/market-test-demo-002",
+          "perceived_authenticity": 4.1,
+          "perceived_cultural_value": 4.0,
+          "purchase_intention": 3.7,
+          "recommendation_intention": 3.9,
+          "sample_size": 36,
+          "story_comprehension": 4.2,
+          "test_channel": "controlled synthetic usability panel"
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 6,
+      "id": 19,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.827608+00:00",
+      "details": {
+        "id": "distribution-demo-001"
+      },
+      "event_type": "revenue_distribution_created",
+      "gate": null,
+      "id": 20,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.830053+00:00",
+      "details": {
+        "audit_takedown_ready": true,
+        "governance_owner": "HeritageGate synthetic demo administrator"
+      },
+      "event_type": "governance_configured",
+      "gate": null,
+      "id": 21,
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.833116+00:00",
+      "details": {
+        "payload": {
+          "audit_takedown_ready": true,
+          "audit_trail_ref": "structured://audit/demo-structured-001",
+          "distribution_records_ref": "structured://revenue-distributions/distribution-demo-001",
+          "governance_owner": "HeritageGate synthetic demo administrator",
+          "revenue_protocol_active": true,
+          "rights_map_current": true
+        }
+      },
+      "event_type": "gate_passed",
+      "gate": 7,
+      "id": 22,
+      "project_id": "demo-structured-001"
+    }
+  ],
+  "gate_records": [
+    {
+      "created_at": "2026-07-29T00:32:38.775827+00:00",
+      "gate": 0,
+      "id": 1,
+      "outcome": "passed",
+      "payload": {
+        "permission_status": "permissible",
+        "rationale": "Synthetic motif invented for software demonstration; no living-community claim.",
+        "reviewers": [
+          "demo cultural reviewer",
+          "demo legal reviewer"
+        ]
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.788594+00:00",
+      "gate": 1,
+      "id": 2,
+      "outcome": "passed",
+      "payload": {
+        "attribution_requirements": "Identify all assets as synthetic HeritageGate demo content.",
+        "authorization_record_ref": "structured://authorization-records/auth-demo-001",
+        "authorization_status": "approved",
+        "authorizers": [
+          "Synthetic motif steward"
+        ],
+        "permitted_uses": [
+          "research demonstration",
+          "software testing"
+        ],
+        "prohibited_uses": [
+          "external commercial deployment",
+          "representation as authentic heritage"
+        ],
+        "revenue_terms": "Synthetic accounting simulation allocates 60% to the fictional steward."
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.790664+00:00",
+      "gate": 2,
+      "id": 3,
+      "outcome": "passed",
+      "payload": {
+        "capture_log_ref": "logs/capture-demo-001.jsonl",
+        "cultural_metadata_complete": true,
+        "dataset_id": "HG-SYNTH-001",
+        "license_terms": "CC0-1.0 for synthetic demo data",
+        "source_count": 12,
+        "technical_metadata_complete": true
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.798670+00:00",
+      "gate": 3,
+      "id": 4,
+      "outcome": "passed",
+      "payload": {
+        "bearer_annotation": true,
+        "element_card_schema_ref": "schemas/cultural-element-card.schema.json",
+        "elements_count": 2,
+        "library_version": "0.3.1-demo",
+        "prohibited_combinations_documented": true
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.804533+00:00",
+      "gate": 4,
+      "id": 5,
+      "outcome": "passed",
+      "payload": {
+        "constraint_method": "rule-based adapter simulation",
+        "generated_variants": 24,
+        "generation_log_ref": "synthetic://logs/generation-demo-002.jsonl",
+        "model_name": "SyntheticPatternGenerator",
+        "model_version": "0.2-demo",
+        "provenance_enabled": true,
+        "source_element_ids": [
+          "element-demo-001",
+          "element-demo-002"
+        ]
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.818745+00:00",
+      "gate": 5,
+      "id": 6,
+      "outcome": "passed",
+      "payload": {
+        "bearer_approved": true,
+        "design_expert_approved": true,
+        "production_feasible": true,
+        "review_record_ref": "structured://expert-reviews/review-demo-bearer,review-demo-design,review-demo-production",
+        "reviewers": [
+          "Synthetic design reviewer",
+          "Synthetic motif steward",
+          "Synthetic production reviewer"
+        ]
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.824153+00:00",
+      "gate": 6,
+      "id": 7,
+      "outcome": "passed",
+      "payload": {
+        "market_test_report_ref": "synthetic://reports/market-test-demo-002",
+        "perceived_authenticity": 4.1,
+        "perceived_cultural_value": 4.0,
+        "purchase_intention": 3.7,
+        "recommendation_intention": 3.9,
+        "sample_size": 36,
+        "story_comprehension": 4.2,
+        "test_channel": "controlled synthetic usability panel"
+      },
+      "project_id": "demo-structured-001"
+    },
+    {
+      "created_at": "2026-07-29T00:32:38.833116+00:00",
+      "gate": 7,
+      "id": 8,
+      "outcome": "passed",
+      "payload": {
+        "audit_takedown_ready": true,
+        "audit_trail_ref": "structured://audit/demo-structured-001",
+        "distribution_records_ref": "structured://revenue-distributions/distribution-demo-001",
+        "governance_owner": "HeritageGate synthetic demo administrator",
+        "revenue_protocol_active": true,
+        "rights_map_current": true
+      },
+      "project_id": "demo-structured-001"
+    }
+  ],
+  "project": {
+    "audit_takedown_ready": true,
+    "created_at": "2026-07-29T00:32:38.773356+00:00",
+    "current_gate": 7,
+    "description": "Synthetic v0.3 demonstration of normalized rights, authorization, element, model, review, market, and revenue entities.",
+    "governance_owner": "HeritageGate synthetic demo administrator",
+    "heritage_name": "Fictional cloud-lattice motif (not real ICH)",
+    "id": "demo-structured-001",
+    "name": "Structured Synthetic Motif Research Demo",
+    "status": "completed",
+    "updated_at": "2026-07-29T00:32:38.833116+00:00"
+  },
+  "schema_version": "0.3.0",
+  "structured_entities": {
+    "authorization_records": [
+      {
+        "attribution_requirements": "Identify all assets as synthetic HeritageGate demo content.",
+        "created_at": "2026-07-29T00:32:38.785713+00:00",
+        "evidence_ref": "synthetic://authorizations/auth-demo-001",
+        "id": "auth-demo-001",
+        "parties": [
+          {
+            "holder_type": "bearer",
+            "name": "Synthetic motif steward",
+            "party_role": "authorizer",
+            "rights_holder_id": "holder-demo-bearer"
+          },
+          {
+            "holder_type": "bearer",
+            "name": "Synthetic motif steward",
+            "party_role": "beneficiary",
+            "rights_holder_id": "holder-demo-bearer"
+          }
+        ],
+        "permitted_uses": [
+          "research demonstration",
+          "software testing"
+        ],
+        "prohibited_uses": [
+          "representation as authentic heritage",
+          "external commercial deployment"
+        ],
+        "project_id": "demo-structured-001",
+        "revenue_terms": "Synthetic accounting simulation allocates 60% to the fictional steward.",
+        "revoked_at": "",
+        "signed_at": "2026-07-29",
+        "status": "approved",
+        "updated_at": "2026-07-29T00:32:38.785713+00:00",
+        "valid_from": "",
+        "valid_until": ""
+      }
+    ],
+    "cultural_element_cards": [
+      {
+        "annotators": [
+          {
+            "annotation_role": "principal",
+            "holder_type": "bearer",
+            "name": "Synthetic motif steward",
+            "rights_holder_id": "holder-demo-bearer"
+          }
+        ],
+        "attribution_text": "Synthetic HeritageGate v0.3 demonstration element.",
+        "created_at": "2026-07-29T00:32:38.793121+00:00",
+        "cultural_meaning": "Fictional geometric meaning used solely to test structured annotation.",
+        "element_code": "SYN-LATTICE-A",
+        "id": "element-demo-001",
+        "name": "Synthetic lattice unit A",
+        "permitted_uses": [
+          "research demonstration",
+          "software testing"
+        ],
+        "prohibited_combinations": [
+          "combination with any real sacred or restricted motif"
+        ],
+        "prohibited_uses": [
+          "claim of real cultural authenticity"
+        ],
+        "project_id": "demo-structured-001",
+        "sensitivity_level": "controlled",
+        "source_ref": "synthetic://datasets/HG-SYNTH-002",
+        "status": "approved",
+        "technical_features": {
+          "line_weight": "medium",
+          "symmetry": "fourfold"
+        },
+        "updated_at": "2026-07-29T00:32:38.793121+00:00",
+        "version": "0.3.1-demo"
+      },
+      {
+        "annotators": [
+          {
+            "annotation_role": "principal",
+            "holder_type": "bearer",
+            "name": "Synthetic motif steward",
+            "rights_holder_id": "holder-demo-bearer"
+          }
+        ],
+        "attribution_text": "Synthetic HeritageGate v0.3 demonstration element.",
+        "created_at": "2026-07-29T00:32:38.795648+00:00",
+        "cultural_meaning": "Fictional geometric meaning used solely to test structured annotation.",
+        "element_code": "SYN-LATTICE-B",
+        "id": "element-demo-002",
+        "name": "Synthetic lattice unit B",
+        "permitted_uses": [
+          "research demonstration",
+          "software testing"
+        ],
+        "prohibited_combinations": [
+          "combination with any real sacred or restricted motif"
+        ],
+        "prohibited_uses": [
+          "claim of real cultural authenticity"
+        ],
+        "project_id": "demo-structured-001",
+        "sensitivity_level": "controlled",
+        "source_ref": "synthetic://datasets/HG-SYNTH-002",
+        "status": "approved",
+        "technical_features": {
+          "line_weight": "light",
+          "symmetry": "bilateral"
+        },
+        "updated_at": "2026-07-29T00:32:38.795648+00:00",
+        "version": "0.3.1-demo"
+      }
+    ],
+    "expert_reviews": [
+      {
+        "aesthetic_score": null,
+        "comments": "Synthetic cultural-coherence approval.",
+        "created_at": "2026-07-29T00:32:38.810370+00:00",
+        "cultural_score": 4.4,
+        "decision": "approved",
+        "evidence_ref": "synthetic://reviews/bearer",
+        "feasibility_score": null,
+        "id": "review-demo-bearer",
+        "model_run_id": "run-demo-001",
+        "project_id": "demo-structured-001",
+        "reviewer_rights_holder_id": "holder-demo-bearer",
+        "reviewer_role": "bearer",
+        "revision_target_gate": null
+      },
+      {
+        "aesthetic_score": 4.2,
+        "comments": "Synthetic design approval.",
+        "created_at": "2026-07-29T00:32:38.812900+00:00",
+        "cultural_score": null,
+        "decision": "approved",
+        "evidence_ref": "synthetic://reviews/design",
+        "feasibility_score": null,
+        "id": "review-demo-design",
+        "model_run_id": "run-demo-001",
+        "project_id": "demo-structured-001",
+        "reviewer_rights_holder_id": "holder-demo-designer",
+        "reviewer_role": "design_expert",
+        "revision_target_gate": null
+      },
+      {
+        "aesthetic_score": null,
+        "comments": "Synthetic production-feasibility approval.",
+        "created_at": "2026-07-29T00:32:38.815380+00:00",
+        "cultural_score": null,
+        "decision": "approved",
+        "evidence_ref": "synthetic://reviews/production",
+        "feasibility_score": 4.0,
+        "id": "review-demo-production",
+        "model_run_id": "run-demo-001",
+        "project_id": "demo-structured-001",
+        "reviewer_rights_holder_id": "holder-demo-producer",
+        "reviewer_role": "production_expert",
+        "revision_target_gate": null
+      }
+    ],
+    "market_tests": [
+      {
+        "created_at": "2026-07-29T00:32:38.821231+00:00",
+        "id": "market-demo-001",
+        "model_run_id": "run-demo-001",
+        "perceived_authenticity": 4.1,
+        "perceived_cultural_value": 4.0,
+        "project_id": "demo-structured-001",
+        "purchase_intention": 3.7,
+        "recommendation": "revise",
+        "recommendation_intention": 3.9,
+        "report_ref": "synthetic://reports/market-test-demo-002",
+        "sample_size": 36,
+        "story_comprehension": 4.2,
+        "test_channel": "controlled synthetic usability panel"
+      }
+    ],
+    "model_runs": [
+      {
+        "constraint_method": "rule-based adapter simulation",
+        "created_at": "2026-07-29T00:32:38.801063+00:00",
+        "ended_at": "2026-07-29T00:01:00+00:00",
+        "id": "run-demo-001",
+        "model_name": "SyntheticPatternGenerator",
+        "model_ref": "synthetic://models/pattern-generator-0.2",
+        "model_version": "0.2-demo",
+        "output_count": 24,
+        "parameters": {
+          "constraint_strength": 0.85,
+          "seed": 20260729
+        },
+        "project_id": "demo-structured-001",
+        "provenance_ref": "synthetic://logs/generation-demo-002.jsonl",
+        "run_status": "completed",
+        "source_element_ids": [
+          "element-demo-001",
+          "element-demo-002"
+        ],
+        "source_elements": [
+          {
+            "element_code": "SYN-LATTICE-A",
+            "id": "element-demo-001",
+            "name": "Synthetic lattice unit A",
+            "status": "approved",
+            "version": "0.3.1-demo"
+          },
+          {
+            "element_code": "SYN-LATTICE-B",
+            "id": "element-demo-002",
+            "name": "Synthetic lattice unit B",
+            "status": "approved",
+            "version": "0.3.1-demo"
+          }
+        ],
+        "started_at": "2026-07-29T00:00:00+00:00"
+      }
+    ],
+    "revenue_distributions": [
+      {
+        "authorization_id": "auth-demo-001",
+        "created_at": "2026-07-29T00:32:38.827198+00:00",
+        "currency": "USD",
+        "distributed_amount": 600.0,
+        "distributed_at": "2026-07-29",
+        "evidence_ref": "synthetic://accounting/distribution-demo-001",
+        "gross_amount": 1000.0,
+        "id": "distribution-demo-001",
+        "notes": "Fictional accounting record; no real revenue or beneficiary.",
+        "period_end": "2026-07-31",
+        "period_start": "2026-07-01",
+        "project_id": "demo-structured-001",
+        "recipient_rights_holder_id": "holder-demo-bearer",
+        "revenue_category": "product",
+        "share_percent": 60.0
+      }
+    ],
+    "rights_holders": [
+      {
+        "active": true,
+        "authority_basis": "Fictional stewardship role created only for software testing",
+        "contact_ref": "synthetic://contacts/bearer",
+        "created_at": "2026-07-29T00:32:38.778319+00:00",
+        "holder_type": "bearer",
+        "id": "holder-demo-bearer",
+        "jurisdiction": "Synthetic demonstration environment",
+        "name": "Synthetic motif steward",
+        "notes": "",
+        "project_id": "demo-structured-001",
+        "updated_at": "2026-07-29T00:32:38.778319+00:00"
+      },
+      {
+        "active": true,
+        "authority_basis": "Fictional design-review role",
+        "contact_ref": "synthetic://contacts/designer",
+        "created_at": "2026-07-29T00:32:38.780684+00:00",
+        "holder_type": "designer",
+        "id": "holder-demo-designer",
+        "jurisdiction": "",
+        "name": "Synthetic design reviewer",
+        "notes": "",
+        "project_id": "demo-structured-001",
+        "updated_at": "2026-07-29T00:32:38.780684+00:00"
+      },
+      {
+        "active": true,
+        "authority_basis": "Fictional production-review role",
+        "contact_ref": "synthetic://contacts/producer",
+        "created_at": "2026-07-29T00:32:38.783211+00:00",
+        "holder_type": "producer",
+        "id": "holder-demo-producer",
+        "jurisdiction": "",
+        "name": "Synthetic production reviewer",
+        "notes": "",
+        "project_id": "demo-structured-001",
+        "updated_at": "2026-07-29T00:32:38.783211+00:00"
+      }
+    ]
+  }
+}

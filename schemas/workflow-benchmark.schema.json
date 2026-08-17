@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate workflow benchmark",
+  "type": "object",
+  "required": ["benchmark_label", "workflow_unit", "heritagegate_seconds", "baseline_seconds", "heritagegate_errors", "baseline_errors", "records_processed", "evidence_ref"],
+  "properties": {
+    "benchmark_label": {"type": "string", "minLength": 1},
+    "workflow_unit": {"type": "string", "minLength": 1},
+    "heritagegate_seconds": {"type": "number", "minimum": 0},
+    "baseline_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "heritagegate_errors": {"type": "integer", "minimum": 0},
+    "baseline_errors": {"type": "integer", "minimum": 0},
+    "records_processed": {"type": "integer", "minimum": 1},
+    "evidence_ref": {"type": "string", "minLength": 1},
+    "notes": {"type": "string"}
+  }
+}

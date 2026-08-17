@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate installation record",
+  "type": "object",
+  "required": ["session_id", "install_method", "software_version", "started_at", "ended_at", "success", "error_count", "environment", "evidence_ref"],
+  "properties": {
+    "session_id": {"type": "string", "minLength": 1},
+    "install_method": {"enum": ["editable", "wheel", "source", "docker", "other"]},
+    "software_version": {"type": "string", "minLength": 1},
+    "started_at": {"type": "string"},
+    "ended_at": {"type": "string"},
+    "success": {"type": "boolean"},
+    "error_count": {"type": "integer", "minimum": 0},
+    "environment": {"type": "object"},
+    "evidence_ref": {"type": "string", "minLength": 1}
+  }
+}

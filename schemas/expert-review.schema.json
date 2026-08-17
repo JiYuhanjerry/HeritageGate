@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate expert review",
+  "type": "object",
+  "required": [
+    "model_run_id",
+    "reviewer_rights_holder_id",
+    "reviewer_role",
+    "decision",
+    "evidence_ref"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "model_run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewer_rights_holder_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewer_role": {
+      "enum": [
+        "bearer",
+        "cultural_expert",
+        "design_expert",
+        "production_expert",
+        "legal_expert",
+        "other"
+      ]
+    },
+    "cultural_score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "aesthetic_score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "feasibility_score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "decision": {
+      "enum": [
+        "approved",
+        "revise",
+        "rejected"
+      ]
+    },
+    "comments": {
+      "type": "string"
+    },
+    "revision_target_gate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 4
+    },
+    "evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

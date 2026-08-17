@@ -1,0 +1,17 @@
+{
+  "authorization_status": "approved",
+  "authorizers": [
+    "synthetic data owner"
+  ],
+  "permitted_uses": [
+    "research demonstration",
+    "software testing"
+  ],
+  "prohibited_uses": [
+    "representation as authentic heritage",
+    "commercial sale"
+  ],
+  "attribution_requirements": "Cite the HeritageGate synthetic demo dataset.",
+  "revenue_terms": "No revenue permitted for the synthetic demo assets.",
+  "authorization_record_ref": "records/authorization-demo-001.json"
+}

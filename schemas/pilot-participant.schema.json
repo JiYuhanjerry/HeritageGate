@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate pilot participant",
+  "type": "object",
+  "required": ["participant_code", "participant_role", "experience_level", "consent_status", "demographics"],
+  "properties": {
+    "participant_code": {"type": "string", "minLength": 1},
+    "participant_role": {"enum": ["researcher", "bearer", "cultural_expert", "designer", "developer", "student", "other"]},
+    "experience_level": {"enum": ["novice", "intermediate", "advanced"]},
+    "consent_status": {"enum": ["consented", "exempt", "withdrawn"]},
+    "consent_ref": {"type": "string"},
+    "demographics": {"type": "object"},
+    "notes": {"type": "string"}
+  }
+}

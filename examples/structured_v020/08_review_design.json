@@ -1,0 +1,10 @@
+{
+  "id": "review-manual-design",
+  "model_run_id": "run-manual-001",
+  "reviewer_rights_holder_id": "holder-manual-designer",
+  "reviewer_role": "design_expert",
+  "aesthetic_score": 4.2,
+  "decision": "approved",
+  "comments": "Synthetic design approval.",
+  "evidence_ref": "synthetic://reviews/manual-design"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "run-manual-001",
+  "model_name": "SyntheticPatternGenerator",
+  "model_version": "0.2-demo",
+  "constraint_method": "rule-based adapter simulation",
+  "model_ref": "synthetic://models/pattern-generator-0.2",
+  "parameters": {
+    "seed": 20260729,
+    "constraint_strength": 0.85
+  },
+  "source_element_ids": [
+    "element-manual-001"
+  ],
+  "output_count": 12,
+  "provenance_ref": "synthetic://logs/generation-manual-001.jsonl",
+  "run_status": "completed"
+}

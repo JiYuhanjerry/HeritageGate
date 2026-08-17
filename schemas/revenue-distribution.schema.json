@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate revenue distribution",
+  "type": "object",
+  "required": [
+    "authorization_id",
+    "recipient_rights_holder_id",
+    "revenue_category",
+    "gross_amount",
+    "currency",
+    "share_percent",
+    "distributed_amount",
+    "period_start",
+    "period_end",
+    "evidence_ref"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "authorization_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recipient_rights_holder_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revenue_category": {
+      "enum": [
+        "product",
+        "content_education",
+        "licensing",
+        "digital_ai_service",
+        "other"
+      ]
+    },
+    "gross_amount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{3}$"
+    },
+    "share_percent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "distributed_amount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "period_start": {
+      "type": "string",
+      "minLength": 1
+    },
+    "period_end": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "distributed_at": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

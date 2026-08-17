@@ -1,0 +1,7 @@
+{
+  "id": "holder-manual-designer",
+  "name": "Synthetic design reviewer",
+  "holder_type": "designer",
+  "authority_basis": "Fictional design-review role",
+  "contact_ref": "synthetic://contacts/designer"
+}

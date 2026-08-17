@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use HeritageGate, please cite the archived software release and the associated SoftwareX article when available."
+title: "HeritageGate: A stage-gated, rights-aware platform with privacy-aware real-pilot evidence and SoftwareX release preparation for AI-assisted intangible cultural heritage projects"
+type: software
+version: 0.5.5
+date-released: "2026-08-03"
+license: Apache-2.0
+authors:
+  - name: "HeritageGate contributors"
+repository-code: "https://github.com/SHELLY000/HeritageGate"
+abstract: >-
+  HeritageGate implements an eight-stage workflow with normalized rights,
+  authorization, cultural-element, model-run, expert-review, market-test,
+  and revenue-distribution records; provenance links; role-specific gate
+  validation; a local browser interface; privacy-aware participant enrollment; reproducible pilot analysis; and GitHub, Zenodo, and SoftwareX submission-release preparation.

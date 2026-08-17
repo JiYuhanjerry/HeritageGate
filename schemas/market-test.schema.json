@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate market test",
+  "type": "object",
+  "required": [
+    "model_run_id",
+    "sample_size",
+    "test_channel",
+    "perceived_authenticity",
+    "perceived_cultural_value",
+    "story_comprehension",
+    "purchase_intention",
+    "recommendation_intention",
+    "recommendation",
+    "report_ref"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "model_run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sample_size": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "test_channel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "perceived_authenticity": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "perceived_cultural_value": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "story_comprehension": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "purchase_intention": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "recommendation_intention": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "recommendation": {
+      "enum": [
+        "scale",
+        "revise",
+        "discontinue"
+      ]
+    },
+    "report_ref": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

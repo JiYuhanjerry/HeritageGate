@@ -1,0 +1,7 @@
+{
+  "library_version": "0.1.0-demo",
+  "elements_count": 6,
+  "bearer_annotation": true,
+  "prohibited_combinations_documented": true,
+  "element_card_schema_ref": "schemas/cultural-element-card.schema.json"
+}

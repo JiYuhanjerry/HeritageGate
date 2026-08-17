@@ -1,0 +1,10 @@
+{
+  "bearer_approved": true,
+  "design_expert_approved": true,
+  "production_feasible": true,
+  "review_record_ref": "records/review-demo-001.json",
+  "reviewers": [
+    "demo bearer-role reviewer",
+    "demo design reviewer"
+  ]
+}

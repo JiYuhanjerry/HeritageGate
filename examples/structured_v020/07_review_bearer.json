@@ -1,0 +1,10 @@
+{
+  "id": "review-manual-bearer",
+  "model_run_id": "run-manual-001",
+  "reviewer_rights_holder_id": "holder-manual-bearer",
+  "reviewer_role": "bearer",
+  "cultural_score": 4.4,
+  "decision": "approved",
+  "comments": "Synthetic cultural-coherence approval.",
+  "evidence_ref": "synthetic://reviews/manual-bearer"
+}

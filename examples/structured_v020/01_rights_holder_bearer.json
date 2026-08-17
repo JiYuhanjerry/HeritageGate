@@ -1,0 +1,8 @@
+{
+  "id": "holder-manual-bearer",
+  "name": "Synthetic motif steward",
+  "holder_type": "bearer",
+  "authority_basis": "Fictional stewardship role used only for software testing",
+  "jurisdiction": "Synthetic demonstration environment",
+  "contact_ref": "synthetic://contacts/bearer"
+}

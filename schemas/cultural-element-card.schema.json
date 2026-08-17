@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate cultural element card",
+  "type": "object",
+  "required": [
+    "element_code",
+    "name",
+    "cultural_meaning",
+    "source_ref",
+    "attribution_text",
+    "permitted_uses",
+    "prohibited_uses",
+    "technical_features",
+    "prohibited_combinations",
+    "sensitivity_level",
+    "status",
+    "version",
+    "annotators"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "element_code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cultural_meaning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attribution_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "permitted_uses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "prohibited_uses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "technical_features": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "prohibited_combinations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sensitivity_level": {
+      "enum": [
+        "open",
+        "controlled",
+        "restricted",
+        "unknown"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved",
+        "retired"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "annotators": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "rights_holder_id",
+          "annotation_role"
+        ],
+        "properties": {
+          "rights_holder_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "annotation_role": {
+            "enum": [
+              "principal",
+              "co-annotator",
+              "reviewer"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

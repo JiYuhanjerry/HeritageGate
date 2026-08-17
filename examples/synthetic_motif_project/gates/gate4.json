@@ -1,0 +1,13 @@
+{
+  "model_name": "SyntheticPatternGenerator",
+  "model_version": "0.1-demo",
+  "constraint_method": "rule-based adapter simulation",
+  "provenance_enabled": true,
+  "generated_variants": 24,
+  "source_element_ids": [
+    "E001",
+    "E002",
+    "E003"
+  ],
+  "generation_log_ref": "logs/generation-demo-001.jsonl"
+}

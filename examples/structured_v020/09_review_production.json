@@ -1,0 +1,10 @@
+{
+  "id": "review-manual-production",
+  "model_run_id": "run-manual-001",
+  "reviewer_rights_holder_id": "holder-manual-producer",
+  "reviewer_role": "production_expert",
+  "feasibility_score": 4.0,
+  "decision": "approved",
+  "comments": "Synthetic production-feasibility approval.",
+  "evidence_ref": "synthetic://reviews/manual-production"
+}

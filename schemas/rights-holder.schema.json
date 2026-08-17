@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate rights holder",
+  "type": "object",
+  "required": [
+    "name",
+    "holder_type",
+    "authority_basis"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "holder_type": {
+      "enum": [
+        "bearer",
+        "community",
+        "cultural_authority",
+        "institution",
+        "designer",
+        "platform",
+        "producer",
+        "other"
+      ]
+    },
+    "authority_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "contact_ref": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

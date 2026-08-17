@@ -1,0 +1,15 @@
+{
+  "id": "distribution-manual-001",
+  "authorization_id": "auth-manual-001",
+  "recipient_rights_holder_id": "holder-manual-bearer",
+  "revenue_category": "product",
+  "gross_amount": 1000.0,
+  "currency": "USD",
+  "share_percent": 60.0,
+  "distributed_amount": 600.0,
+  "period_start": "2026-07-01",
+  "period_end": "2026-07-31",
+  "evidence_ref": "synthetic://accounting/distribution-manual-001",
+  "distributed_at": "2026-07-29",
+  "notes": "Fictional accounting record; no real revenue or beneficiary."
+}

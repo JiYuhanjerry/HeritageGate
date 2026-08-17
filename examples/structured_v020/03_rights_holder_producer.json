@@ -1,0 +1,7 @@
+{
+  "id": "holder-manual-producer",
+  "name": "Synthetic production reviewer",
+  "holder_type": "producer",
+  "authority_basis": "Fictional production-review role",
+  "contact_ref": "synthetic://contacts/producer"
+}

@@ -1,0 +1,8 @@
+{
+  "rights_map_current": true,
+  "revenue_protocol_active": true,
+  "audit_takedown_ready": true,
+  "distribution_records_ref": "records/revenue-demo-001.json",
+  "governance_owner": "HeritageGate demo administrator",
+  "audit_trail_ref": "exports/audit-demo-001.json"
+}

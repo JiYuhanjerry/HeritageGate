@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeritageGate pilot session",
+  "type": "object",
+  "required": ["participant_id", "condition", "session_label", "environment", "session_status"],
+  "properties": {
+    "participant_id": {"type": "string", "minLength": 1},
+    "condition": {"enum": ["heritagegate", "baseline"]},
+    "session_label": {"type": "string", "minLength": 1},
+    "environment": {"type": "object"},
+    "started_at": {"type": "string"},
+    "ended_at": {"type": "string"},
+    "session_status": {"enum": ["planned", "in_progress", "completed", "abandoned"]},
+    "notes": {"type": "string"}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "element-manual-001",
+  "element_code": "SYN-MANUAL-A",
+  "name": "Synthetic manual lattice unit",
+  "cultural_meaning": "Fictional geometric meaning used solely to test structured annotation.",
+  "source_ref": "synthetic://datasets/HG-SYNTH-MANUAL",
+  "attribution_text": "Synthetic HeritageGate v0.2 demonstration element.",
+  "permitted_uses": [
+    "research demonstration",
+    "software testing"
+  ],
+  "prohibited_uses": [
+    "claim of real cultural authenticity"
+  ],
+  "technical_features": {
+    "symmetry": "fourfold",
+    "line_weight": "medium"
+  },
+  "prohibited_combinations": [
+    "combination with any real sacred or restricted motif"
+  ],
+  "sensitivity_level": "controlled",
+  "status": "approved",
+  "version": "0.2.0-demo",
+  "annotators": [
+    {
+      "rights_holder_id": "holder-manual-bearer",
+      "annotation_role": "principal"
+    }
+  ]
+}
