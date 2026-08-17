@@ -1,0 +1,28 @@
+{
+  "title": "HeritageGate: A stage-gated, rights-aware platform with privacy-aware real-pilot evidence and SoftwareX release preparation for AI-assisted intangible cultural heritage projects",
+  "upload_type": "software",
+  "description": "<p>HeritageGate is an open-source Python research-software platform for stage-gated, rights-aware, provenance-preserving AI-assisted intangible cultural heritage (ICH) research and productization. It implements a persistent Gate 0&ndash;7 workflow with normalized rights, authorization, cultural-element, model-run, expert-review, market-test, and revenue-distribution records; versioned consent-document registration with SHA-256 verification; privacy-aware participant enrollment that refuses direct identifiers and stores only keyed hashes of local source identifiers; automated data-quality checks; reproducible descriptive statistics with Wilson and seeded-bootstrap intervals; a local browser dashboard; and GitHub, Zenodo, and SoftwareX submission-release preparation.</p><p>The release is pure Python (3.10+) with no mandatory third-party runtime dependency and ships 73 automated tests. The bundled example data are synthetic and do not represent any real cultural heritage tradition, community, or human participant.</p>",
+  "creators": [
+    {
+      "name": "Ji, Yuhan",
+      "orcid": "0009-0008-7594-9460"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "intangible cultural heritage",
+    "generative AI",
+    "workflow",
+    "provenance",
+    "rights governance",
+    "research software"
+  ],
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/JiYuhanjerry/HeritageGate",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
