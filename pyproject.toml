@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "heritagegate"
-version = "0.5.5"
+version = "0.5.6"
 description = "A stage-gated, rights-aware research workflow with privacy-aware real-pilot enrollment, reproducible statistics, and GitHub, Zenodo, and SoftwareX release preparation for AI-assisted intangible cultural heritage projects."
 readme = "README.md"
 requires-python = ">=3.10"

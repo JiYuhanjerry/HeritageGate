@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use HeritageGate, please cite the archived software release and the associated SoftwareX article when available."
 title: "HeritageGate: A stage-gated, rights-aware platform with privacy-aware real-pilot evidence and SoftwareX release preparation for AI-assisted intangible cultural heritage projects"
 type: software
-version: 0.5.5
-date-released: "2026-08-03"
+version: 0.5.6
+date-released: "2026-08-17"
 license: Apache-2.0
 doi: 10.5281/zenodo.21979700
 authors:

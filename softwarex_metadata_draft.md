@@ -8,7 +8,7 @@
 
 | Field | Draft value |
 |---|---|
-| Current code version | v0.5.5 |
+| Current code version | v0.5.6 |
 | Permanent link to code/repository | https://github.com/JiYuhanjerry/HeritageGate |
 | Permanent link to reproducible capsule | [TO BE ASSIGNED if available] |
 | Legal Code License | Apache-2.0 |
@@ -22,7 +22,7 @@
 
 | Field | Draft value |
 |---|---|
-| Current software version | v0.5.5 |
+| Current software version | v0.5.6 |
 | Permanent link to executables | https://doi.org/10.5281/zenodo.21979700 |
 | Permanent link to reproducible capsule | [TO BE ASSIGNED if available] |
 | Legal Software License | Apache-2.0 |
@@ -42,12 +42,12 @@
 - Wilson and deterministic seeded-bootstrap statistical reporting with input hashes and checksums.
 - Privacy-safe submission-release ZIP with GitHub, Zenodo, CodeMeta, CFF, SoftwareX tables, manuscript draft, highlights, cover letter, aggregate evidence, and verification checklists.
 - Non-destructive opening of earlier HeritageGate databases.
-- 73 passing automated tests.
+- 74 passing automated tests.
 
 ## Evidence still required before submission
 
 - Ethics-appropriate, authorized real-pilot records.
 - Independently verified installation and task-completion evidence.
 - Verified study environments, allocation, missingness, and baseline comparability.
-- ~~Public repository, tagged release, archived wheel, and software DOI.~~ Completed: repository https://github.com/JiYuhanjerry/HeritageGate, tag v0.5.5, Zenodo DOI 10.5281/zenodo.21979700.
+- ~~Public repository, tagged release, archived wheel, and software DOI.~~ Completed: repository https://github.com/JiYuhanjerry/HeritageGate, tag v0.5.6, Zenodo DOI 10.5281/zenodo.21979700 (concept DOI; resolves to the latest archived version).
 - Final authors, affiliations, ORCID records, CRediT roles, support email, funding, competing interests, data availability, and generative-AI declaration.

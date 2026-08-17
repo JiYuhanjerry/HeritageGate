@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.5.6 - 2026-08-17
+
+Found while writing the consolidated user manual, by executing the
+documented Quick Start sequence rather than only reading it.
+
+### Fixed
+
+- **Demonstration entity IDs collided across projects.** `structured-demo`
+  and `pilot-demo` created their normalized governance entities (rights
+  holders, authorizations, element cards, model runs, reviews, market
+  tests, revenue distributions) and pilot records (studies, tasks,
+  participants, sessions, installations, task attempts, SUS responses,
+  benchmarks) under fixed literal IDs such as `auth-demo-001` and
+  `participant-demo-01`. Entity IDs are a global primary key by design —
+  `get_entity(entity_type, entity_id)` takes no project argument — so
+  running either demo command a second time under a *different* project ID
+  against the same database found the first project's entities already
+  registered under those IDs and silently reused them instead of creating
+  new ones for the second project. The second project was then left with no
+  authorization record of its own, and any Gate 1 check against it failed
+  with "Gate 1 requires at least one approved authorization record" even
+  though the demonstration had appeared to run successfully. Every
+  demonstration-generated ID is now salted with the calling `project_id`.
+  Re-running a demonstration under the *same* project ID remains fully
+  supported and idempotent, unchanged from prior behaviour.
+
+### Tests
+
+- Increased from 73 to 74. The new test runs `structured-demo` under one
+  project and `pilot-demo` under a second, against the same database, and
+  asserts each project ends up with its own distinct authorization record
+  and a quality check with zero blocking issues.
+
 ## 0.5.5 - 2026-08-03
 
 Corrections from a fourth audit round, which examined spreadsheet-facing

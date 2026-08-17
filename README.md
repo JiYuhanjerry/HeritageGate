@@ -7,7 +7,7 @@
 stage-gated, rights-aware, provenance-preserving AI-assisted intangible
 cultural heritage (ICH) research and productization.
 
-Version **0.5.5** extends the Gate 0–7 workflow with a privacy-aware real-pilot
+Version **0.5.6** extends the Gate 0–7 workflow with a privacy-aware real-pilot
 implementation layer and a submission-release generator. It registers versioned
 consent-document metadata, imports participants without retaining the local
 source identifier, records withdrawal, detects missing or inconsistent study
@@ -19,7 +19,7 @@ ethics review, informed consent, secure identity management, or editorial
 judgment. The bundled examples are synthetic and must not be represented as
 real ICH or human-participant evidence.
 
-## What v0.5.5 implements
+## What v0.5.6 implements
 
 - Persistent Gate 0–Gate 7 workflow with ordered transitions and rollback.
 - Normalized governance entities for rights, authorization, cultural-element
@@ -51,7 +51,7 @@ real ICH or human-participant evidence.
   readiness checklists, and checksums.
 - Local browser dashboard for real-pilot and release readiness.
 - Non-destructive opening of earlier HeritageGate SQLite databases.
-- **73 automated tests**.
+- **74 automated tests**.
 
 ## Installation
 
@@ -60,7 +60,7 @@ The release is pure Python and has no mandatory third-party runtime dependency.
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install .\dist\heritagegate-0.5.5-py3-none-any.whl
+python -m pip install .\dist\heritagegate-0.5.6-py3-none-any.whl
 ```
 
 For editable development installation:
@@ -78,7 +78,7 @@ python -c "import heritagegate; print(heritagegate.__version__)"
 Expected output:
 
 ```text
-0.5.5
+0.5.6
 ```
 
 ## Synthetic demonstration
@@ -214,7 +214,7 @@ python -m unittest discover -s .\tests -v
 Expected ending:
 
 ```text
-Ran 73 tests
+Ran 74 tests
 
 OK
 ```
@@ -230,6 +230,7 @@ OK
 
 ## Documentation
 
+- `docs/USER_MANUAL.md` — consolidated installation, workflow, and command reference
 - `docs/real_pilot_implementation.md`
 - `docs/reproducible_analysis.md`
 - `docs/submission_release_module.md`
