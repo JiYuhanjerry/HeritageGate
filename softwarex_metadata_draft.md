@@ -23,7 +23,7 @@
 | Field | Draft value |
 |---|---|
 | Current software version | v0.5.6 |
-| Permanent link to executables | https://doi.org/10.5281/zenodo.21979700 |
+| Permanent link to executables | https://doi.org/10.5281/zenodo.21979698 |
 | Permanent link to reproducible capsule | [TO BE ASSIGNED if available] |
 | Legal Software License | Apache-2.0 |
 | Computing platforms / operating systems | Windows, Linux, macOS; command line and local browser interface |
@@ -49,5 +49,5 @@
 - Ethics-appropriate, authorized real-pilot records.
 - Independently verified installation and task-completion evidence.
 - Verified study environments, allocation, missingness, and baseline comparability.
-- ~~Public repository, tagged release, archived wheel, and software DOI.~~ Completed: repository https://github.com/JiYuhanjerry/HeritageGate, tag v0.5.6, Zenodo DOI 10.5281/zenodo.21979700 (concept DOI; resolves to the latest archived version).
+- ~~Public repository, tagged release, archived wheel, and software DOI.~~ Completed: repository https://github.com/JiYuhanjerry/HeritageGate, tag v0.5.6, Zenodo DOI 10.5281/zenodo.21979698 (concept DOI; resolves to the latest archived version).
 - Final authors, affiliations, ORCID records, CRediT roles, support email, funding, competing interests, data availability, and generative-AI declaration.

@@ -1,7 +1,7 @@
 # HeritageGate
 
 [![CI](https://github.com/JiYuhanjerry/HeritageGate/actions/workflows/ci.yml/badge.svg)](https://github.com/JiYuhanjerry/HeritageGate/actions/workflows/ci.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21979700.svg)](https://doi.org/10.5281/zenodo.21979700)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21979698.svg)](https://doi.org/10.5281/zenodo.21979698)
 
 **HeritageGate** is an open-source Python research-software platform for
 stage-gated, rights-aware, provenance-preserving AI-assisted intangible
