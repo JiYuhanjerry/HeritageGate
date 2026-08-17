@@ -8,28 +8,28 @@
 
 | Field | Draft value |
 |---|---|
-| Current code version | v0.5.1 |
-| Permanent link to code/repository | [TO BE ASSIGNED: public tagged repository] |
+| Current code version | v0.5.5 |
+| Permanent link to code/repository | https://github.com/JiYuhanjerry/HeritageGate |
 | Permanent link to reproducible capsule | [TO BE ASSIGNED if available] |
 | Legal Code License | Apache-2.0 |
 | Code versioning system used | git |
 | Software code languages/tools/services | Python 3.10+, SQLite, Python standard library, GitHub Actions |
 | Compilation/operating environments/dependencies | No compilation; Windows, Linux, macOS; Python 3.10+; no mandatory third-party runtime dependency |
 | Developer documentation | Root README, architecture, governance model, pilot module, real-pilot guide, reproducible analysis guide, submission-release guide, schemas, and tests |
-| Support email | [TO BE ASSIGNED] |
+| Support email | https://github.com/JiYuhanjerry/HeritageGate/issues |
 
 ## Software metadata
 
 | Field | Draft value |
 |---|---|
-| Current software version | v0.5.1 |
-| Permanent link to executables | [TO BE ASSIGNED: archived wheel/release] |
+| Current software version | v0.5.5 |
+| Permanent link to executables | https://doi.org/10.5281/zenodo.21979700 |
 | Permanent link to reproducible capsule | [TO BE ASSIGNED if available] |
 | Legal Software License | Apache-2.0 |
 | Computing platforms / operating systems | Windows, Linux, macOS; command line and local browser interface |
 | Installation requirements | Python 3.10+; install included wheel or `python -m pip install -e .` |
 | User manual | Root README, Windows quick start, web guide, real-pilot guide, analysis guide, and release guide |
-| Support email | [TO BE ASSIGNED] |
+| Support email | https://github.com/JiYuhanjerry/HeritageGate/issues |
 
 ## Current software evidence
 
@@ -42,12 +42,12 @@
 - Wilson and deterministic seeded-bootstrap statistical reporting with input hashes and checksums.
 - Privacy-safe submission-release ZIP with GitHub, Zenodo, CodeMeta, CFF, SoftwareX tables, manuscript draft, highlights, cover letter, aggregate evidence, and verification checklists.
 - Non-destructive opening of earlier HeritageGate databases.
-- 45 passing automated tests.
+- 73 passing automated tests.
 
 ## Evidence still required before submission
 
 - Ethics-appropriate, authorized real-pilot records.
 - Independently verified installation and task-completion evidence.
 - Verified study environments, allocation, missingness, and baseline comparability.
-- Public repository, tagged v0.5.1 release, archived wheel, and software DOI.
+- ~~Public repository, tagged release, archived wheel, and software DOI.~~ Completed: repository https://github.com/JiYuhanjerry/HeritageGate, tag v0.5.5, Zenodo DOI 10.5281/zenodo.21979700.
 - Final authors, affiliations, ORCID records, CRediT roles, support email, funding, competing interests, data availability, and generative-AI declaration.

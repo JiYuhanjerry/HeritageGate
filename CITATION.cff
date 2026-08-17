@@ -5,6 +5,7 @@ type: software
 version: 0.5.5
 date-released: "2026-08-03"
 license: Apache-2.0
+doi: 10.5281/zenodo.21979700
 authors:
   - family-names: "Ji"
     given-names: "Yuhan"
