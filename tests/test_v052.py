@@ -368,7 +368,14 @@ class KeyIntegrityTests(unittest.TestCase):
             engine.real_pilot.enroll_existing_participant("P1", "pt", source_token="X")
 
     def test_in_memory_database_refuses_keyed_derivation(self) -> None:
-        engine = HeritageGateEngine(":memory:")
+        # ":memory:" cannot be passed to the engine constructor on Windows,
+        # where a colon is invalid in file names and init_db fails before the
+        # guard under test is reached; on POSIX the construction also leaves a
+        # literal file of that name behind. Point an otherwise valid manager
+        # at the sentinel instead, so the guard itself is exercised on every
+        # platform without touching the filesystem.
+        engine = self._engine("mem_guard.db")
+        engine.real_pilot.database = ":memory:"
         with self.assertRaises(RealPilotError) as ctx:
             engine.real_pilot.identity_key_path()
         self.assertIn("stable location", str(ctx.exception))
