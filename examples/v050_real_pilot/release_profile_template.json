@@ -1,7 +1,7 @@
 {
   "software_title": "HeritageGate",
   "manuscript_title": "HeritageGate: a stage-gated, rights-aware platform with privacy-aware real-pilot evidence for AI-assisted intangible cultural heritage projects",
-  "software_version": "0.5.5",
+  "software_version": "0.5.6",
   "release_status": "draft",
   "evidence_status": "synthetic",
   "repository_url": "https://github.com/JiYuhanjerry/HeritageGate",
