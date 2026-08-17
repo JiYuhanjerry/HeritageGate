@@ -13,7 +13,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from heritagegate.demo import run_pilot_demo
+from heritagegate.demo import run_pilot_demo, run_structured_demo
 from heritagegate.engine import HeritageGateEngine
 from heritagegate.realpilot import (
     IDENTITY_SCHEME_KEYED,
@@ -53,12 +53,39 @@ class BundledDemonstrationTests(unittest.TestCase):
     def test_duplicate_enrollment_raises_a_domain_error(self) -> None:
         engine = HeritageGateEngine(self.root / "dup.db")
         run_pilot_demo(engine, "demo-pilot-001")
+        # The demonstration's participant IDs are an internal detail (and are
+        # now salted with the project ID; see the regression test below), so
+        # look one up rather than hardcoding its literal string.
+        first_participant = engine.pilot.list_entities("demo-pilot-001", "participant")[0]
         with self.assertRaises(RealPilotError):
             engine.real_pilot.enroll_existing_participant(
                 "demo-pilot-001",
-                "participant-demo-01",
+                first_participant["id"],
                 source_token="a-different-token",
             )
+
+    def test_structured_and_pilot_demo_do_not_collide_across_projects(self) -> None:
+        """Fifth-round finding: demonstration entity IDs were fixed literals,
+        not scoped to the calling project. Running the demonstration under a
+        second project ID against the same database found the first
+        project's entities already registered under those IDs and silently
+        reused them, leaving the second project without its own
+        rights-holder or authorization records — so the first thing a new
+        user does after the bundled demo (run it again under a project ID of
+        their choosing) failed with 'Gate 1 requires at least one approved
+        authorization record'.
+        """
+        engine = HeritageGateEngine(self.root / "cross_project.db")
+        run_structured_demo(engine, "proj-A")
+        result = run_pilot_demo(engine, "proj-B")
+        self.assertEqual(result["quality"]["blocking_issue_count"], 0, result["quality"]["issues"])
+        self.assertTrue(result["quality"]["passed"])
+        # Each project must have its own authorization record, not share one.
+        auth_a = engine.structured.list_entities("proj-A", "authorization")
+        auth_b = engine.structured.list_entities("proj-B", "authorization")
+        self.assertEqual(len(auth_a), 1)
+        self.assertEqual(len(auth_b), 1)
+        self.assertNotEqual(auth_a[0]["id"], auth_b[0]["id"])
 
 
 class DeterministicArtefactTests(unittest.TestCase):
